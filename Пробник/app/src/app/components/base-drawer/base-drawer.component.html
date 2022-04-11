@@ -1,0 +1,148 @@
+<ng-container
+  *ngIf="{
+    meta: meta$ | async,
+    activeRoute: activeRoute$ | async,
+    isExpanded: isExpanded$ | async,
+    userData: userData$ | async,
+    bottomButtons: bottomButtons$ | async,
+    expanded: expandedChild$ | async
+  } as observables"
+>
+  <!-- Раскрытый список -->
+  <div
+    *ngIf="observables.isExpanded; else compactTemplate"
+    class="h-100-p hidden-scrollbar overflow-scroll_y"
+  >
+    <gas-navigation-element
+      class="mb-lg"
+      (click)="toggleExpanded()"
+      wide
+      burger
+      icon="navigation-back"
+    >
+    </gas-navigation-element>
+
+    <div class="gas-menu__title ml-mega mb-sm">
+      {{ observables.meta?.title }}
+    </div>
+
+    <div [class.mb-xlg]="!observables.meta?.version" class="regular-size-4-bold text-weak ml-mega">
+      {{ observables.meta?.subtitle?.toUpperCase() }}
+    </div>
+
+    <div
+      *ngIf="observables.meta?.version"
+      class="regular-size-2 text-placeholder ml-mega mt-sm mb-xlg"
+    >
+      ВЕРСИЯ {{ observables.meta?.version }}
+    </div>
+
+    <div class="gas-menu__menu-wrap">
+      <div>
+        <ng-container *ngFor="let route of observables.meta?.routes">
+          <!-- Родительский элемент -->
+          <gas-navigation-element
+            [active]="observables.activeRoute === route.route"
+            wide
+            [icon]="route.icon ?? ''"
+            [title]="route.title"
+            [hasChild]="!!route.childs?.length && route.childs!.length > 0"
+            [expanded]="isExpandedRoute(route, observables.activeRoute)"
+            (expanded)="toggleChild(route.route)"
+            (click)="toggleExpanded(); route.callback()"
+          >
+          </gas-navigation-element>
+
+          <!-- Дочерний элемент -->
+          <!-- eslint-disable-next-line max-len -->
+          <ng-container
+            *ngIf="
+              !!route?.childs?.length &&
+              route.childs!.length > 0 &&
+              isExpandedRoute(route, observables.activeRoute)
+            "
+          >
+            <gas-navigation-element
+              *ngFor="let childRoute of route.childs"
+              [active]="observables.activeRoute === childRoute.route"
+              wide
+              [icon]="childRoute.icon ?? ''"
+              [title]="childRoute.title"
+              (click)="toggleExpanded(); childRoute.callback()"
+            >
+            </gas-navigation-element>
+          </ng-container>
+        </ng-container>
+      </div>
+
+      <!-- Нижняя часть меню -->
+      <div>
+        <gas-navigation-element
+          *ngFor="let button of observables.bottomButtons"
+          wide
+          [icon]="button.icon"
+          [title]="button.title"
+          (click)="executeBottomButton(button)"
+        >
+        </gas-navigation-element>
+
+        <gas-navigation-element
+          *ngIf="observables?.userData"
+          wide
+          [icon]="observables?.userData?.icon ?? ''"
+          [title]="observables?.userData?.title ?? ''"
+          (click)="checkUserDataClick(observables?.userData)"
+        >
+        </gas-navigation-element>
+      </div>
+    </div>
+
+    <!-- TODO: Добавить количество уведомлений уведомления -->
+    <!-- TODO: Добавить не активное состояние -->
+  </div>
+
+  <!-- Компактный список -->
+  <ng-template #compactTemplate>
+    <!-- Бургер меню -->
+    <gas-navigation-element
+      icon="navigation-burger"
+      burger
+      class="menu-burger"
+      (click)="toggleExpanded()"
+    >
+    </gas-navigation-element>
+
+    <!-- Меню из присланных данных -->
+    <div class="gas-menu__menu-wrap">
+      <!--добавить скролл-контейнер-->
+
+      <div class="menu-scroll hidden-scrollbar overflow-scroll_y overflow-hidden_x">
+        <ng-template ngFor let-route [ngForOf]="observables.meta?.routes" let-i="index">
+          <app-drawer-item
+            [routeItem]="route"
+            [active]="isActiveRoute(route, observables.activeRoute) && hoveredItemIndex !== i"
+            (mouseover)="hoveredItemIndex = i"
+            (mouseout)="hoveredItemIndex = -1"
+          >
+          </app-drawer-item>
+        </ng-template>
+      </div>
+      <!-- Нижняя часть меню -->
+      <div>
+        <gas-navigation-element
+          *ngFor="let button of observables.bottomButtons"
+          [icon]="button.icon"
+          (click)="executeBottomButton(button)"
+        >
+        </gas-navigation-element>
+      </div>
+    </div>
+  </ng-template>
+
+  <app-user-info-modal
+    *ngIf="showUserInfoModal"
+    [visible]="showUserInfoModal"
+    (logoutEvent)="logOut()"
+    (closeEvent)="showUserInfoModal = false"
+  ></app-user-info-modal>
+</ng-container>

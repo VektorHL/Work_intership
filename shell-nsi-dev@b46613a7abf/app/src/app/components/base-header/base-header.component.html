@@ -1,0 +1,50 @@
+<div class="gas-header">
+  <gas-icon
+    *ngIf="icon$ | async as icon"
+    [name]="icon"
+    [size]="40"
+    [color]="(iconColor$ | async) || ''"
+    class="mr-lg {{ iconClass$ | async }}"
+  >
+  </gas-icon>
+  <div>
+    <div class="gas-header__breadcrumbs grid nowrap items-center">
+      <div *ngFor="let crumb of breadcrumbs; let i = index" class="grid nowrap items-center">
+        <gas-icon *ngIf="i > 0" name="layout-crum" [size]="20"> </gas-icon>
+        <div>
+          <div
+            *ngIf="
+              breadcrumbs.length !== i + 1 && crumb.callback;
+              then historyCrumb;
+              else activeCrumb
+            "
+          ></div>
+          <ng-template #historyCrumb>
+            <div class="gas-header__breadcrumbs__link" (click)="crumb.callback(crumb)">
+              {{ crumb.title }}
+            </div>
+            <!-- <a
+              [href]="crumb.callback ? '#' : null"
+            > -->
+            <!-- {{ crumb.title }} -->
+            <!-- </a> -->
+          </ng-template>
+          <ng-template #activeCrumb>
+            <div class="gas-header__breadcrumbs__active">{{ crumb.title }}</div>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+    <!-- <gas-breadcrumbs [breadcrumb]="(breadcrumbs$ | async) || []"></gas-breadcrumbs> -->
+    <div class="gas-header__text">
+      <div class="regular-size-7 text-normal">{{ title$ | async }}</div>
+      <div *ngIf="subtitle$ | async as subtitle" class="gas-header__subtitle">
+        {{ subtitle }}
+      </div>
+    </div>
+  </div>
+
+  <div class="gas-header__container" #containeRef></div>
+</div>
+
+<ng-content></ng-content>

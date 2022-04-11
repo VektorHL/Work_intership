@@ -1,0 +1,19 @@
+<div>
+  <gas-navigation-element
+    #navigationElement
+    [gasDynamicPositioningPopup]="{
+      props: {
+        menuItem: routeItem,
+        parentRef: navElement
+      },
+      preferablePositions: popupPosition,
+      component: popupComponent,
+      isCloseByClickOutside: true,
+      isHoverable: true,
+      alignType: 'fixed'
+    }"
+    [icon]="routeItem?.icon ?? ''"
+    [active]="active"
+    (click)="itemClickHandler()">
+  </gas-navigation-element>
+</div>

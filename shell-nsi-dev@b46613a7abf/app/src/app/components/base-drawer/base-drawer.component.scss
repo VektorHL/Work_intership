@@ -1,0 +1,48 @@
+@import "../../../../node_modules/@cikrf/gas-ui-kit/style/mixins.scss";
+
+:host {
+  width: 48px;
+  height: 100%;
+  display: flex;
+  background-color: var(--gas-menu-background-color, var(--base-white));
+  box-shadow: var(--gas-menu-shadow, var(--panel-level-1-left));
+  transition: 0.3s;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  z-index: var(--gas-menu-z-index, var(--layer-high));
+
+  .menu-scroll {
+    max-height: 70%;
+    --gas-width: 0px;
+  }
+
+  .menu-burger {
+    height: var(--gas-menu-burger-height, 64px);
+  }
+
+  &._expanded {
+    width: 413px;
+  }
+
+  .gas-menu {
+    &__title {
+      @include regular-size-2-bold();
+      color: var(--gas-menu-title-color, var(--text-weak));
+      white-space: pre-line;
+      text-transform: uppercase;
+    }
+
+    &__menu-wrap {
+      display: inherit;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    &__logout {
+      transform: rotate(180deg);
+    }
+  }
+}
