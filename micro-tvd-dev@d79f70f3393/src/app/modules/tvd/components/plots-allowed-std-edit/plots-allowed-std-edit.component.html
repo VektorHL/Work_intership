@@ -1,0 +1,95 @@
+<app-base-page-wrapper xmlns="http://www.w3.org/1999/html">
+  <app-page-header title="Использование участков другого СТД" backUrl="/tvd/plots/"></app-page-header>
+
+  <app-form-generator
+    *ngIf="fgSchemaBaseFilter"
+    [meta]="fgSchemaBaseFilter"
+    [model]="form?.value"
+    [mode]="fgMode"
+    [disableChangedHighlight]="true"
+  ></app-form-generator>
+
+  <h2 class="mt-lg regular-size-4-bold ph-md">Определение участков</h2>
+  <div class="wrapper grid mt-lg col-12">
+    <div class="col-6 pr-xs">
+      <div class="table-wrapper">
+        <app-base-table
+          dataType="local"
+          [tableData]="mainStdPlots"
+          [tableColumns]="tableColumns"
+          [selectable]="true"
+          [(selected)]="mainStdSelectedPlots"
+          [tableRowTemplate]="tableRowTemplate"
+          [showSettingsButton]="false"
+          [showHeader]="false"
+          [showFooter]="false"
+          [infinityScroll]="true"
+          [pagination]="pagination"
+        ></app-base-table>
+        <div
+          class="table-wrapper__transfer-button"
+          gasButton="secondary"
+          [disabled]="mainStdSelectedPlots.length === 0 || !this.form.value.stdIdOut"
+          (click)="transferStdToAllow()"
+        >
+          <gas-icon name="cool-short-right" [size]="24"></gas-icon>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 pl-xs">
+      <div class="table-wrapper">
+        <app-base-table
+          dataType="local"
+          [tableData]="subordinateStdPlots"
+          [tableColumns]="tableColumns"
+          [selectable]="true"
+          [(selected)]="subordinateStdSelectedPlots"
+          [tableBodyTemplate]="tableBodyTemplate"
+          [tableRowTemplate]="tableRowTemplate"
+          [showSettingsButton]="false"
+          [showHeader]="false"
+          [showFooter]="false"
+          [infinityScroll]="true"
+          [pagination]="pagination"
+        >
+          <ng-template #tableBodyTemplate let-props>
+            <ng-template ngFor [ngForOf]="props?.rows" let-row let-i="index">
+              <tr
+                app-base-table-row-main
+                class="base-table-row base-table-row__main"
+                [class.base-table-row__newest]="row.data?.toSave"
+                [tableRowActionsTemplate]="props.actionsTemplate"
+                [tableRowTemplate]="props.rowTemplate"
+                [row]="row"
+                [cols]="props.cols"
+                [selectable]="props.selectable"
+                [class.base-table-row__divider_bottom]="i !== props.rows.length - 1"
+                (click)="props.rowClickHandle($event, row)"
+              ></tr>
+            </ng-template>
+          </ng-template>
+        </app-base-table>
+        <div
+          class="table-wrapper__transfer-button"
+          gasButton="secondary"
+          [disabled]="subordinateStdSelectedPlots.length === 0 || !this.form.value.stdIdIn"
+          (click)="transferStdToDisallow()"
+        >
+          <gas-icon name="arrows-undo" [size]="16"></gas-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons grid mt-lg grid-justify-end">
+    <div class="reset mr-xs" gasButton="secondary" (click)="reset()">Сбросить</div>
+    <div gasButton="primary" class="ml-xs" (click)="apply()">Применить</div>
+  </div>
+</app-base-page-wrapper>
+
+<ng-template #tableRowTemplate let-props>
+  <ng-template ngFor [ngForOf]="props.iterableRow" let-iterableItem let-row let-i="index">
+    <td app-base-table-td [value]="iterableItem" [row]="props.row"></td>
+  </ng-template>
+</ng-template>

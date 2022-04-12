@@ -1,0 +1,255 @@
+{
+  "groupList": [
+    {
+      "view": "cardgroup",
+      "name": "base-info",
+      "label": "Основные сведения",
+      "attrList": [
+        "parentCommissionOrg",
+        "start",
+        "end",
+        "number",
+        "plotsType",
+        "voteStructure",
+        "plotsCategory",
+        "initialVoterCount",
+        "regVoterCount"
+      ]
+    },
+    {
+      "view": "cardgroup",
+      "name": "slicingDoc",
+      "label": "Документ о нарезке",
+      "attrList": ["slicingRes", "slicingResNum", "slicingResDate"]
+    },
+    {
+      "view": "cardgroup",
+      "name": "equipment",
+      "label": "Оснащение участка",
+      "attrList": ["webCamera", "onlineTranslation", "qrCode", "electronicVoting", "bulletinTreatment"]
+    }
+  ],
+  "attrList": [
+    {
+      "name": "parentCommissionOrg",
+      "type": "string",
+      "view": "async-select",
+      "label": "Вышестоящая комиссия",
+      "props": {
+        "url": "https://gas.apps.dev.devsun.ru/service/registry/commission",
+        "filter": "subjectRF.SUBJCOD==68 and commissionType.VNKOD==4 and status==ACTIVE",
+        "schema": "CommissionComposition",
+        "idField": "commissionOrg.id",
+        "labelField": "commissionOrg.commissionName",
+        "outgoingLink": true
+      },
+      "mandatory": true
+    },
+    {
+      "name": "start",
+      "view": "int",
+      "type": "int",
+      "label": "Начальный номер участка",
+      "mandatory": true
+    },
+    {
+      "name": "end",
+      "type": "int",
+      "view": "int",
+      "label": "Конечный номер участка",
+      "mandatory": true
+    },
+    {
+      "name": "number",
+      "view": "int",
+      "type": "int",
+      "label": "Количество участков",
+      "mandatory": true
+    },
+    {
+      "name": "plotsType",
+      "type": "string",
+      "view": "select",
+      "label": "Тип избирательного участка",
+      "createReadOnly": true,
+      "mandatory": true,
+      "enum": [
+        {
+          "value": "Постоянный",
+          "key": "permanent"
+        },
+        {
+          "value": "Временный",
+          "key": "temporary"
+        }
+      ]
+    },
+    {
+      "name": "voteStructure",
+      "type": "string",
+      "view": "async-select",
+      "label": "Контингент жителей на участке",
+      "props": {
+        "schema": "NSI97",
+        "idField": "VNKOD",
+        "labelField": "ZNACHATR",
+        "outgoingLink": true
+      },
+      "mandatory": true
+    },
+    {
+      "name": "plotsCategory",
+      "type": "string",
+      "view": "async-select",
+      "label": "Категория избирательного участка",
+      "props": {
+        "schema": "NSI116",
+        "idField": "VNKOD",
+        "labelField": "ZNACHATR",
+        "outgoingLink": true
+      },
+      "mandatory": true
+    },
+    {
+      "name": "initialVoterCount",
+      "view": "int",
+      "type": "int",
+      "label": "Число избирателей на момент формирования",
+      "mandatory": true
+    },
+    {
+      "name": "regVoterCount",
+      "view": "int",
+      "type": "int",
+      "label": "Число избирателей текущее",
+      "mandatory": true
+    },
+    {
+      "name": "slicingRes",
+      "label": "Наименование документа",
+      "mandatory": true,
+      "type": "string",
+      "view": "async-select",
+      "props": {
+        "schema": "NSI945",
+        "idField": "VNKOD",
+        "labelField": "ZNACHATR",
+        "outgoingLink": true
+      }
+    },
+    {
+      "name": "slicingResNum",
+      "view": "int",
+      "type": "int",
+      "label": "Номер документа",
+      "mandatory": true
+    },
+    {
+      "name": "slicingResDate",
+      "view": "date",
+      "type": "date",
+      "label": "Дата",
+      "mandatory": true
+    },
+    {
+      "name": "webCamera",
+      "view": "int",
+      "type": "int",
+      "label": "Количество web-камер"
+    },
+    {
+      "name": "onlineTranslation",
+      "type": "boolean",
+      "view": "select",
+      "enum": [
+        {
+          "value": "Да",
+          "key": true
+        },
+        {
+          "value": "Нет",
+          "key": false
+        }
+      ],
+      "label": "On-line трансляции"
+    },
+    {
+      "name": "qrCode",
+      "type": "boolean",
+      "view": "select",
+      "enum": [
+        {
+          "value": "Да",
+          "key": true
+        },
+        {
+          "value": "Нет",
+          "key": false
+        }
+      ],
+      "label": "Использование QR-кода"
+    },
+    {
+      "name": "electronicVoting",
+      "view": "boolean",
+      "type": "boolean",
+      "label": "КЭГ"
+    },
+    {
+      "name": "bulletinTreatment",
+      "view": "boolean",
+      "type": "boolean",
+      "label": "КОИБ"
+    }
+  ],
+  "grid": {
+    "start": {
+      "col": 3
+    },
+    "end": {
+      "col": 3
+    },
+    "number": {
+      "col": 3
+    },
+    "plotsType": {
+      "col": 3
+    },
+    "voteStructure": {
+      "col": 6
+    },
+    "plotsCategory": {
+      "col": 6
+    },
+    "initialVoterCount": {
+      "col": 6
+    },
+    "regVoterCount": {
+      "col": 6
+    },
+    "slicingRes": {
+      "col": 4
+    },
+    "slicingResNum": {
+      "col": 4
+    },
+    "slicingResDate": {
+      "col": 4
+    },
+    "webCamera": {
+      "col": 4
+    },
+    "onlineTranslation": {
+      "col": 4
+    },
+    "qrCode": {
+      "col": 4
+    },
+    "electronicVoting": {
+      "col": 2
+    },
+    "bulletinTreatment": {
+      "col": 1
+    }
+  }
+}

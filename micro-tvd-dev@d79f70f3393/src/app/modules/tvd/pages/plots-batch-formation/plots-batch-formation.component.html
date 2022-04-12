@@ -1,0 +1,16 @@
+<app-base-loader [visible]="!!(loading$ | async)"></app-base-loader>
+
+<app-base-page-wrapper>
+  <div style="min-height: 80vh">
+    <app-page-header title="Пакетное формирование" backUrl="/tvd/plots/"></app-page-header>
+    <app-form-generator
+      *ngIf="formGeneratorSchema"
+      [meta]="formGeneratorSchema"
+      [model]="formGenetatorModel"
+      [mode]="formGeneratorMode"
+      [disableChangedHighlight]="true"
+      [events]="formGeneratorEvents"
+      (formChanged)="onFormChanged($event)"
+    ></app-form-generator>
+  </div>
+</app-base-page-wrapper>

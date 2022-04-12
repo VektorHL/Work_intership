@@ -1,0 +1,23 @@
+<div class="gas-header">
+    <gas-icon
+        *ngIf="icon$ | async as icon"
+        [name]="icon"
+        [size]="40"
+        [color]="(iconColor$ | async) || ''"
+        class="mr-lg {{ iconClass$ | async }}">
+    </gas-icon>
+    <div>
+        <gas-breadcrumbs [breadcrumb]="(breadcrumbs$ | async) || []"></gas-breadcrumbs>
+        <div class="gas-header__text">
+            <div class="regular-size-7 text-normal">{{ title$ | async }}</div>
+            <div
+                *ngIf="subtitle$ | async as subtitle"
+                class="gas-header__subtitle">
+                {{ subtitle }}
+            </div>
+        </div>
+    </div>
+    <div class="gas-header__container" #containeRef></div>
+</div>
+
+<ng-content></ng-content>

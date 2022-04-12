@@ -1,0 +1,12 @@
+<app-page-header title="Новый участок" backUrl="/tvd/plots/"></app-page-header>
+<app-base-page-wrapper style="padding-top: 0">
+  <app-form-generator
+    *ngIf="formGeneratorSchema"
+    [meta]="formGeneratorSchema"
+    [model]="formGenetatorModel"
+    [mode]="formGeneratorMode"
+    [events]="formGeneratorEvents"
+    [disableChangedHighlight]="true"
+    (formChanged)="onFormChanged($event)"
+  ></app-form-generator>
+</app-base-page-wrapper>

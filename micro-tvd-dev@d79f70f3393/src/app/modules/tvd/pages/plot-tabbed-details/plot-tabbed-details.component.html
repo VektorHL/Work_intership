@@ -1,0 +1,15 @@
+<div class="tvd-list">
+  <app-base-loader [visible]="loading"></app-base-loader>
+  <gc-navigation-tabs *ngIf="tabs.length" [tabs]="tabs"></gc-navigation-tabs>
+  <app-base-page-wrapper style="padding-top: 0">
+    <app-plot-info-board
+      *ngIf="info$ | async as info"
+      [createDate]="info.createDate"
+      [editDate]="info.editDate"
+      [std]="info.std"
+      [status]="info.status"
+      prepend-content
+    ></app-plot-info-board>
+    <router-outlet></router-outlet>
+  </app-base-page-wrapper>
+</div>

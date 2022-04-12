@@ -1,0 +1,10 @@
+<app-base-loader [visible]="!!(loading$ | async)"></app-base-loader>
+<app-page-header [title]="pageTitle" backUrl="/tvd/plots/"></app-page-header>
+<app-form-generator
+  *ngIf="formGeneratorSchema && formGeneratorModel"
+  [meta]="formGeneratorSchema"
+  [model]="formGeneratorModel"
+  [mode]="formGeneratorMode"
+  [disableChangedHighlight]="true"
+  (formChanged)="onFormChanged($event)"
+></app-form-generator>

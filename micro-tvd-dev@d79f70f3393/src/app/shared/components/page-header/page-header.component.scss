@@ -1,0 +1,36 @@
+@import '../../../styles/variables';
+
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--base-page-padding, 16px);
+  align-items: center;
+  justify-content: space-between;
+
+  &__section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__icon {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background-color: var(--base-bg-selected, #E0F0FF);
+    color: var(--base-priority-medium, #4192D9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-left: var(--base-page-margin, 16px);
+    text-align: left;
+    letter-spacing: 0px;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: normal;
+    font-family: 'PTSans-Regular', sans-serif;
+  }
+}

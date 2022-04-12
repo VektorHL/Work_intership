@@ -1,0 +1,20 @@
+
+.header-container {
+  margin: 20px 0 20px 16px;
+  &__title {
+    font-style: normal;
+    color: var(--base-dark-gray);
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    margin-left: 16px;
+  }  
+}
+
+.form-footer {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  justify-content: flex-end;
+  align-items: center;
+}

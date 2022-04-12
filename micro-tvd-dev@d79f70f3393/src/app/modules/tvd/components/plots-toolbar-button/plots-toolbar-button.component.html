@@ -1,0 +1,14 @@
+<div *ngIf="buttonsVisible && (show$ | async)">
+  <div *ngIf="createPage || formationPage; else infoForm">
+    <div gasButton="primary" [disabled]="!!(formUnchanged$ | async)" (click)="onClickSave()">Сохранить</div>
+  </div>
+  <ng-template #infoForm>
+    <div class="grid" *ngIf="editMode$ | async; else edit">
+      <div gasButton="secondary" class="mr-md" (click)="onClickReset()">Отменить</div>
+      <div gasButton="primary" [disabled]="!!(formUnchanged$ | async)" (click)="onClickSave()">Сохранить</div>
+    </div>
+    <ng-template #edit>
+      <div class="app-primary-button" gasButton="primary" (click)="onClickEdit()">Редактировать</div>
+    </ng-template>
+  </ng-template>
+</div>

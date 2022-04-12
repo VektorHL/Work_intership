@@ -1,0 +1,47 @@
+@import '../../../../styles/variables';
+
+.election-board {
+  display: block;
+  background-color: var(--base-page-background, #F4F6F9);
+  padding: {
+    top: var(--base-page-padding, 16px);
+    left: var(--base-page-padding, 16px);
+    right: var(--base-page-padding, 16px);
+  };
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    background: var(--base-page-content-background, #FFFFFF) 0% 0% no-repeat padding-box;
+    opacity: 1;
+    align-items: center;
+    padding: calc(2*var(--base-page-padding, 16px));
+    box-shadow: 0px 1px 2px #00000033;
+    border-radius: var(--base-border-radius, 4px);
+    font-style: normal;
+    line-height: 20px;
+    font-size: 16px;
+    letter-spacing: 0px;
+    text-align: left;
+  }
+}
+
+.bullet {
+  display: flex;
+  align-items: center;
+  background-color: var(--base-bg-highlight, #F2F2F2);
+  border-radius: var(--base-border-radius, 4px);
+  padding: {
+    left: 8px;
+    right: 8px;
+  }
+  height: 26px;
+  margin-left: 8px;
+  font-style: normal;
+  line-height: 20px;
+  font-size: 16px;
+  letter-spacing: 0px;
+  text-align: left;
+}

@@ -1,0 +1,62 @@
+@import "~@cikrf/gas-ui-kit/style/index";
+@import "./variables";
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 2px;
+  height: 3px;
+  background: var(--base-bg-light-gray);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: var(--base-gray-light);
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'PTSans-Regular', sans-serif;
+  color: var(--base-dark-gray);
+}
+
+.max-width {
+  &-none {
+    max-width: none!important;
+  }
+}
+
+.app-primary-button {
+  border: var(--border-line-normal) !important;
+  border-color: var(--base-priority-medium) !important;
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@font-face {
+  font-family: "PTSans-Regular";
+  src: local("PTSans-Regular"), url(/assets/fonts/PT-Sans/PTSans-Regular.ttf) format("truetype");
+}

@@ -1,0 +1,79 @@
+@Library('shared-library') _
+
+pipeline {
+  agent {
+    label "jenkins-webpack-node14.15"
+  }
+
+  options {
+  	disableConcurrentBuilds()
+  }
+
+  stages {
+    stage('installing dependencies') {
+      steps {
+        container("webpack") {
+          sh "yarn install"
+        }
+      }
+    }
+
+    stage('lint') {
+      when {
+        branch 'PR-*'
+      }
+      steps {
+        container('webpack') {
+           sh "yarn lint"
+        }
+      }
+    }
+
+    stage('building for dev') {
+      when {
+        branch 'dev'
+      }
+      steps {
+        container("webpack") {
+          sh "yarn build:dev"
+        }
+      }
+    }
+
+    stage('building for release') {
+      when {
+        branch 'release/*'
+      }
+      steps {
+        container("webpack") {
+          sh "yarn build:master"
+        }
+      }
+    }
+
+    stage('deploy to k8s') {
+      when {
+        anyOf {
+          branch 'dev'; branch 'release/*'
+        }
+      }
+      environment {
+        def APP = ""
+        def APP_VERSION = ""
+        def sx = ""
+      }
+      steps {
+        container('docker') {
+          script {
+            sx = readJSON file: "package.json"
+            APP = sx.name.toLowerCase()
+            APP_VERSION = sx.version
+          }
+
+           buildImageProject( app: APP, project: "gas")
+           deployAppProject( app: APP, project: "gas")
+        }
+      }
+    }
+  }
+}

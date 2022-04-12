@@ -1,0 +1,49 @@
+.table {
+  & ::ng-deep thead {
+    display: none;
+  }
+
+  &__head {
+    background-color: #f2f2f2;
+    background-color: var(--base-bg-highlight);
+  }
+
+  &__divider_bottom {
+    border-bottom: 1px solid #DDDBDA;
+    border-bottom: 1px solid var(--base-bg-light-gray);
+  }
+
+  th {
+    text-align: start;
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 0 16px;
+    font-size: 16px;
+    vertical-align: middle;
+  }
+
+  .base-table-cell {
+    color: var(--base-gray-medium);
+  }
+
+  .base-table-row {
+    min-height: 48px;
+    height: 48px;
+    position: relative;
+    padding-right: 68px;
+    color: #1f1f1f;
+    color: var(--base-dark-gray);
+
+    &__divider_bottom {
+      border-bottom: 1px solid #DDDBDA;
+      border-bottom: 1px solid var(--base-bg-light-gray);
+    }
+  }
+
+
+
+  .th {
+    display: flex;
+  }
+}
+

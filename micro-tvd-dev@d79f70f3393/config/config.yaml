@@ -1,0 +1,49 @@
+app:
+  containers:
+  - image:
+      repo: docker.devsun.ru
+      name: dev/micro-tvd
+      tag: "1.0.0"
+    ports:
+    - number: 80
+      name: http
+    name: micro-tvd
+    resources:
+      limits:
+        cpu: "500m"
+        memory: "1Gi"
+      requests:
+        cpu: "200m"
+        memory: "500Mi"
+  external:
+    enabled: true
+    path: /mfe/tvd
+    enableWebSocket: true
+    annotations:
+      nginx.ingress.kubernetes.io/cors-allow-methods: "PUT, GET, POST, OPTIONS"
+      nginx.ingress.kubernetes.io/cors-allow-origin: "https://*.gas.apps.dev.devsun.ru"
+  envs:
+    SSO_AUTH: "{{ SSO_AUTH }}" #Адрес сервиса SSO
+    NSI_REGISTRY_HOST: "{{ NSI_REGISTRY_HOST }}"
+    WORKFLOW_MANAGER_HOST: "{{ WORKFLOW_MANAGER_HOST }}"
+    META_REGISTRY_HOST: "{{ META_REGISTRY_HOST }}"
+    FIAS_SERVICE_HOST: "{{ FIAS_SERVICE_HOST }}"
+    COMMISSIONS_REGISTRY_HOST: "{{ COMMISSIONS_REGISTRY_HOST }}"
+    JOURNAL_REGISTRY_HOST: "{{ JOURNAL_REGISTRY_HOST }}"
+    CAMPAIGN_REGISTRY_HOST: "{{ CAMPAIGN_REGISTRY_HOST }}"
+    CANDIDATE_REGISTRY_HOST: "{{ CANDIDATE_REGISTRY_HOST }}"
+    NOTIFIER_GATEWAY: "{{ NOTIFIER_GATEWAY }}"
+    S3_URL_SIGNER: "{{ S3_URL_SIGNER }}"
+    USERTASK_REGISTRY_HOST: "{{ USERTASK_REGISTRY_HOST }}"
+    GAS_HOST: "{{ GAS_HOST }}"
+    APOLLO_SERVER_HOST: "{{ APOLLO_SERVER_HOST }}"
+
+monitoring:
+  group: gas
+  project: GAS_PAIP
+
+features:
+  static:
+    enabled: true
+    params:
+      - sso

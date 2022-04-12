@@ -1,0 +1,7670 @@
+"""Exposes a URL that specifies the behaviour of this scalar."""
+directive @specifiedBy(
+  """The URL that specifies the behaviour of this scalar."""
+  url: String!
+) on SCALAR
+
+type DictionarySpecification {
+  """Дата архивации"""
+  archived: Long
+
+  """Идентификатор коллекции справочника"""
+  avroId: String
+
+  """Дата создания"""
+  created: Long
+
+  """Создатель"""
+  creator: String
+
+  """Описание справочника"""
+  description: String
+
+  """Форма справочника"""
+  form: String
+
+  """Глобальный идентификатор"""
+  guid: String
+
+  """Уникальный идентификатор документа"""
+  id: ID!
+
+  """Вид справочника (ссылка на справочник, сейчас просто строка)"""
+  kind: String
+
+  """Дата модификации как UnixTime (Может требоваться при обновлении)"""
+  modified: Long!
+
+  """Кто модифицировал"""
+  modifier: String
+
+  """Наименование справочника"""
+  name: String
+
+  """Владелец"""
+  owner: String
+
+  """Имя схемы документа"""
+  schema: String!
+
+  """Тип справочника (иерархический/табличный)"""
+  type: String
+
+  """Версия справочника"""
+  version: String
+}
+
+type DictionarySpecificationPage {
+  documents: [DictionarySpecification]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+"""Java Long as scalar."""
+scalar Long
+
+type NSI1 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI10 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI105 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI105Page {
+  documents: [NSI105]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI10Page {
+  documents: [NSI10]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI11 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI112 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI112Page {
+  documents: [NSI112]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI113 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI113Page {
+  documents: [NSI113]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI114 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI114Page {
+  documents: [NSI114]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI115 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI115Page {
+  documents: [NSI115]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI116 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI116Page {
+  documents: [NSI116]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI118 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI118Page {
+  documents: [NSI118]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI119 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI119Page {
+  documents: [NSI119]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI11Page {
+  documents: [NSI11]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI12 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI120 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI120Page {
+  documents: [NSI120]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI121 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI121Page {
+  documents: [NSI121]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI123 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI123Page {
+  documents: [NSI123]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI124 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI124Page {
+  documents: [NSI124]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI125 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI125Page {
+  documents: [NSI125]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI126 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI126Page {
+  documents: [NSI126]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI127 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI127Page {
+  documents: [NSI127]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI12Page {
+  documents: [NSI12]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI13 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI131 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI131Page {
+  documents: [NSI131]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI134 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI134Page {
+  documents: [NSI134]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI137 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI137Page {
+  documents: [NSI137]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI138 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI138Page {
+  documents: [NSI138]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI13Page {
+  documents: [NSI13]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI14 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI140 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI140Page {
+  documents: [NSI140]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI141 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI141Page {
+  documents: [NSI141]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI142 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI142Page {
+  documents: [NSI142]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI146 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI146Page {
+  documents: [NSI146]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI149 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI149Page {
+  documents: [NSI149]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI14Page {
+  documents: [NSI14]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI15 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI150 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI150Page {
+  documents: [NSI150]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI151 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI151Page {
+  documents: [NSI151]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI152 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI152Page {
+  documents: [NSI152]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI153 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI153Page {
+  documents: [NSI153]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI155 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI155Page {
+  documents: [NSI155]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI156 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI156Page {
+  documents: [NSI156]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI15Page {
+  documents: [NSI15]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI16 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI161 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI161Page {
+  documents: [NSI161]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI162 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI162Page {
+  documents: [NSI162]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI163 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI163Page {
+  documents: [NSI163]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI164 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI164Page {
+  documents: [NSI164]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI165 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI165Page {
+  documents: [NSI165]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI167 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI167Page {
+  documents: [NSI167]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI168 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI168Page {
+  documents: [NSI168]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI16Page {
+  documents: [NSI16]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI170 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI170Page {
+  documents: [NSI170]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI171 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI171Page {
+  documents: [NSI171]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI172 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI172Page {
+  documents: [NSI172]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI174 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI174Page {
+  documents: [NSI174]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI176 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI176Page {
+  documents: [NSI176]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI177 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI177Page {
+  documents: [NSI177]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI178 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI178Page {
+  documents: [NSI178]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI179 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI179Page {
+  documents: [NSI179]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI18 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI180 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI180Page {
+  documents: [NSI180]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI181 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI181Page {
+  documents: [NSI181]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI182 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI182Page {
+  documents: [NSI182]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI184 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI184Page {
+  documents: [NSI184]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI185 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI185Page {
+  documents: [NSI185]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI186 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI186Page {
+  documents: [NSI186]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI187 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI187Page {
+  documents: [NSI187]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI18Page {
+  documents: [NSI18]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI19 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI190 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI190Page {
+  documents: [NSI190]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI191 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI191Page {
+  documents: [NSI191]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI192 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI192Page {
+  documents: [NSI192]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI193 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI193Page {
+  documents: [NSI193]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI19Page {
+  documents: [NSI19]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI1Page {
+  documents: [NSI1]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI2 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI20 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI200 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI200Page {
+  documents: [NSI200]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI201 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI201Page {
+  documents: [NSI201]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI202 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI202Page {
+  documents: [NSI202]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI204 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI204Page {
+  documents: [NSI204]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI205 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI205Page {
+  documents: [NSI205]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI206 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI206Page {
+  documents: [NSI206]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI20Page {
+  documents: [NSI20]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI21 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI211 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI211Page {
+  documents: [NSI211]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI212 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI212Page {
+  documents: [NSI212]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI213 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI213Page {
+  documents: [NSI213]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI215 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI215Page {
+  documents: [NSI215]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI216 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI216Page {
+  documents: [NSI216]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI21Page {
+  documents: [NSI21]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI221 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI221Page {
+  documents: [NSI221]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI222 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI222Page {
+  documents: [NSI222]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI223 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI223Page {
+  documents: [NSI223]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI224 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI224Page {
+  documents: [NSI224]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI23 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI23Page {
+  documents: [NSI23]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI24 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI24Page {
+  documents: [NSI24]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI25 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI25Page {
+  documents: [NSI25]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI26 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI26Page {
+  documents: [NSI26]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI27 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI27Page {
+  documents: [NSI27]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI28 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI28Page {
+  documents: [NSI28]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI29 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI29Page {
+  documents: [NSI29]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI2Page {
+  documents: [NSI2]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI3 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI30 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI300 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI300Page {
+  documents: [NSI300]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI301 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI301Page {
+  documents: [NSI301]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI302 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI302Page {
+  documents: [NSI302]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI303 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI303Page {
+  documents: [NSI303]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI304 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI304Page {
+  documents: [NSI304]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI305 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI305Page {
+  documents: [NSI305]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI306 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI306Page {
+  documents: [NSI306]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI307 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI307Page {
+  documents: [NSI307]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI308 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI308Page {
+  documents: [NSI308]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI309 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI309Page {
+  documents: [NSI309]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI30Page {
+  documents: [NSI30]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI31 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI310 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI310Page {
+  documents: [NSI310]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI311 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI311Page {
+  documents: [NSI311]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI31Page {
+  documents: [NSI31]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI32 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI320 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI320Page {
+  documents: [NSI320]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI321 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI321Page {
+  documents: [NSI321]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI322 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI322Page {
+  documents: [NSI322]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI323 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI323Page {
+  documents: [NSI323]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI324 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI324Page {
+  documents: [NSI324]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI325 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI325Page {
+  documents: [NSI325]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI326 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI326Page {
+  documents: [NSI326]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI327 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI327Page {
+  documents: [NSI327]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI328 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI328Page {
+  documents: [NSI328]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI329 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI329Page {
+  documents: [NSI329]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI32Page {
+  documents: [NSI32]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI33 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI330 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI330Page {
+  documents: [NSI330]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI331 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI331Page {
+  documents: [NSI331]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI332 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI332Page {
+  documents: [NSI332]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI334 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI334Page {
+  documents: [NSI334]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI335 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI335Page {
+  documents: [NSI335]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI336 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI336Page {
+  documents: [NSI336]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI337 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI337Page {
+  documents: [NSI337]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI338 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI338Page {
+  documents: [NSI338]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI339 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI339Page {
+  documents: [NSI339]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI33Page {
+  documents: [NSI33]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI34 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI340 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI340Page {
+  documents: [NSI340]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI341 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI341Page {
+  documents: [NSI341]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI343 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI343Page {
+  documents: [NSI343]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI345 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI345Page {
+  documents: [NSI345]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI346 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI346Page {
+  documents: [NSI346]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI347 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI347Page {
+  documents: [NSI347]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI348 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI348Page {
+  documents: [NSI348]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI349 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI349Page {
+  documents: [NSI349]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI34Page {
+  documents: [NSI34]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI35 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI350 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI350Page {
+  documents: [NSI350]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI351 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI351Page {
+  documents: [NSI351]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI35Page {
+  documents: [NSI35]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI36 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI36Page {
+  documents: [NSI36]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI39 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI39Page {
+  documents: [NSI39]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI3Page {
+  documents: [NSI3]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI4 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI40 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI40Page {
+  documents: [NSI40]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI41 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI41Page {
+  documents: [NSI41]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI42 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI42Page {
+  documents: [NSI42]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI43 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI43Page {
+  documents: [NSI43]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI44 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI44Page {
+  documents: [NSI44]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI45 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI45Page {
+  documents: [NSI45]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI46 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI46Page {
+  documents: [NSI46]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI47 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI47Page {
+  documents: [NSI47]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI49 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI49Page {
+  documents: [NSI49]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI4Page {
+  documents: [NSI4]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI5 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI58 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI58Page {
+  documents: [NSI58]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI5Page {
+  documents: [NSI5]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI63 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI63Page {
+  documents: [NSI63]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI64 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI64Page {
+  documents: [NSI64]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI66 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI669 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI669Page {
+  documents: [NSI669]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI66Page {
+  documents: [NSI66]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI671 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI671Page {
+  documents: [NSI671]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI672 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI672Page {
+  documents: [NSI672]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI69 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI69Page {
+  documents: [NSI69]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI7 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI704 {
+  ADRGOR: String
+  COUNTFR: Int
+  COUNTMEM: Int
+  DATE_PAUSE: String
+  DATE_REGISTER: String
+  DATEGOSOUT: String
+  DATEINFO: String
+  DATEMINUST: String
+  DATEOUT: String
+  DATEREGUST: String
+  DATREGOO: String
+  DOLJRUKOO: String
+  DOLJRUKRO: String
+  FAX: String
+  FIORUKOO: String
+  FIORUKRO: String
+  id: ID!
+  IZSP: String
+  KOLCHLOO: Float
+  modified: Long!
+  NAMESOPRED: String
+  NAMOO: String
+  NAMORGUST: String
+  NUMREGOO: String
+  NUMREGUP: String
+  OGRN: String
+  OPDRPR_OUT: String
+  OPDRPR_PAUSE: String
+  OUT_REASON: String
+  PAUSE_REASON: String
+  POSTIND: String
+  PRIM: String
+  RUKORGAN: String
+  schema: String!
+  SOKRNAM: String
+  SUBJCOD: String
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEL: String
+  TERSTAT: String
+  ULDOM: String
+  URDEIST: String
+  VIDOO: Int
+  VIHORGAN: String
+  VRN: Float!
+  VRNATD: Float
+}
+
+type NSI704Page {
+  documents: [NSI704]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI706 {
+  ADRHOST: String
+  ATSV: String
+  CENTRATE: String
+  DATEADD: String
+  DATEDEL: String
+  DATEMAKE: String
+  DATEMOD: String
+  DATKOLGR: String
+  DELTAIZ: Float
+  ELECTORS: Int
+  FCI_MAIL: String
+  FCICOD: String
+  FCICOD1: String
+  FCICOD2: String
+  FCICOD3: String
+  FCICOD4: String
+  FCICOD5: String
+  GKSCOD1: String
+  GKSCOD2: String
+  GKSCOD3: String
+  GKSCOD4: String
+  GKSCOD5: String
+  id: ID!
+  KARTAATE: String
+  KODCIK: Int
+  KODFO: Int
+  KODTELEF: String
+  KODTIPTE: String
+  KODTIPUPR: String
+  KODVIDPREOBR: String
+  KOLGRATE: Int
+  LNAME: String
+  modified: Long!
+  NAMATE: String
+  NAMATEROD: String
+  NAMIK: String
+  NAMIKROD: String
+  NAMORGUST: String
+  NUM65: Int
+  NUMUR: Int
+  PARENT: String
+  POSTIND: String
+  PRIM: String
+  PRIZBIRTERR: String
+  PRIZM: Int
+  PRNEKONFID: String
+  PRSUBJ: String
+  REGDOC: String
+  schema: String!
+  SCID: Int
+  SMESH: Int
+  SUBJ_VID: String
+  SUBJCOD: String
+  TEKKOLTER: Int
+  USERADD: String
+  VRN: Float!
+  VRNSOURCE: Float
+  ZAVNUMKSA: String
+}
+
+type NSI706Page {
+  documents: [NSI706]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI708 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI708Page {
+  documents: [NSI708]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI71 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI710 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI710Page {
+  documents: [NSI710]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI711 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI711Page {
+  documents: [NSI711]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI713 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI713Page {
+  documents: [NSI713]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI714 {
+  DBUSER: String
+  DELETED: String
+  id: ID!
+  modified: Long!
+  SCADDRESS: String
+  SCEMAIL: String
+  SCEND: String
+  SCFAX: String
+  SCFIO: String
+  schema: String!
+  SCID: Int
+  SCNAME: String
+  SCPHONE: String
+  SCPHONECODE: String
+  SCZAVNUMKSA: String
+  TIMESTAMP: Int
+  VRN: Float!
+}
+
+type NSI714Page {
+  documents: [NSI714]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI715 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI715Page {
+  documents: [NSI715]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI717 {
+  FORMULA1: String
+  FORMULA2: String
+  FORMULA3: String
+  FORMULIROVKA: String
+  id: ID!
+  KOD: String
+  KOEFF: Float
+  modified: Long!
+  PART1: String
+  PART2: String
+  PART3: String
+  PART4: String
+  schema: String!
+  TEXT: String
+}
+
+type NSI717Page {
+  documents: [NSI717]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI718 {
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  NAME: String
+  schema: String!
+  VRN: Float!
+}
+
+type NSI718Page {
+  documents: [NSI718]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI719 {
+  ARCHIVE: Int
+  CODE: Int
+  COMMENTS: String
+  id: ID!
+  MINAGE: Int
+  modified: Long!
+  NAME: String
+  NDIGIT: Int
+  NUMPATTERN: String
+  NUMSENSE: Int
+  NUMSERIAL: Int
+  PATTERN: String
+  PRSROK: Int
+  PRVIDCAND: Int
+  schema: String!
+  SERPATTERN: String
+  SHORTNAME: String
+  VRN: Float!
+}
+
+type NSI719Page {
+  documents: [NSI719]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI71Page {
+  documents: [NSI71]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI72 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI720 {
+  ARCHIVE: Int
+  DATEADD: String
+  DATERETRO: String
+  DEPOSITACCOUNT: Int
+  DEPOSITPAYMENT: Int
+  id: ID!
+  MEDIA: Int
+  modified: Long!
+  NAME: String
+  OUTPUTPAYMENT: Int
+  PARTYP: Float
+  RETURNPAYMENT: Int
+  RETURNREASON: Int
+  schema: String!
+  SHORTNAME: String
+  SUBJECTTYPE: Int
+  TYPECONST: Int
+  TYPOWNER: Int
+  VRN: Float!
+}
+
+type NSI720Page {
+  documents: [NSI720]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI721 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  schema: String!
+  SHORTSTAT: String
+  SHORTTXT: String
+  STAT: String
+  STAT2: String
+  STAT3: String
+  STATREP: String
+  TXTSTAT: String
+}
+
+type NSI721Page {
+  documents: [NSI721]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI722 {
+  DATERETRO: String
+  id: ID!
+  KODORG: Int
+  modified: Long!
+  NAMEORG: String
+  PRRESULT: Int
+  schema: String!
+  SUDUR: Int
+  SYSVBR_DATEADD: String
+}
+
+type NSI722Page {
+  documents: [NSI722]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI723 {
+  DATERETRO: String
+  id: ID!
+  KODDOLIK: String
+  modified: Long!
+  NAMEDOLIK: String
+  schema: String!
+}
+
+type NSI723Page {
+  documents: [NSI723]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI724 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  KODSUBJVIDV: String
+  LETTERKOD: String
+  modified: Long!
+  NAMESV: String
+  NAMESVIB: String
+  NAMESVROD: String
+  NAMESVTV: String
+  PRIM: String
+  PRIZK: Int
+  schema: String!
+  VIDOPF: String
+}
+
+type NSI724Page {
+  documents: [NSI724]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI725 {
+  DATERETRO: String
+  id: ID!
+  IDSTATE: Int
+  KOD_STAT: Int
+  modified: Long!
+  NAMESTATE: String
+  PRDOCIZB: Int
+  PRSNG: Int
+  schema: String!
+  SHORTNAME: String
+  SHORTSTATENAME: String
+  WEBDOMEN: String
+}
+
+type NSI725Page {
+  documents: [NSI725]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI726 {
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PNUM: Int
+  PRIM: String
+  PRSD: Int
+  PRSOC2: Int
+  PRWORK: Int
+  schema: String!
+  SOCCODE: Int
+  SOCNAME: String
+  SOCNAMEMEN: String
+  SOCNAMEWOMEN: String
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+}
+
+type NSI726Page {
+  documents: [NSI726]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI727 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI727Page {
+  documents: [NSI727]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI728 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI728Page {
+  documents: [NSI728]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI729 {
+  ABBREV: String
+  DATERETRO: String
+  FULLTEXT: String
+  id: ID!
+  KATEG: Int
+  KL_CODE: String
+  modified: Long!
+  NAMCON: String
+  NUMDOSR: Int
+  NUMPOVT: Int
+  OP: String
+  PRIM: String
+  PROTZIV: Int
+  PRRETRO: Int
+  REF: Int
+  schema: String!
+  SHIFR_M: Int
+  SHIFR_R: Int
+  SHIFRCON: Int
+  STDAT: String
+  STNUM: Float
+  SV3: Int
+  SV4: Int
+  SV5: Int
+  SVM: Int
+  SVP: Int
+  USLOKR1: Int
+  USLOKR2: Int
+  USLOKRX: Int
+  VIBDEP: Int
+  VIBDOL: Int
+  VRN_CLS: Int
+}
+
+type NSI729Page {
+  documents: [NSI729]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI72Page {
+  documents: [NSI72]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI73 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI730 {
+  id: ID!
+  KODPRICHUD: Int
+  modified: Long!
+  PRDOV: Int
+  PRIM: String
+  PRINIMEMBER: Int
+  PRINIUPOL: Int
+  PRIZO: Int
+  PRNARUSH: Int
+  PROTKAZ_REG: Int
+  PROTKAZ_REG_DOV: Int
+  PROTKAZ_ZAV: Int
+  PRUPOL: Int
+  PRUPOLFIN: Int
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATERETRO: String
+  TEXTPRICHUD: String
+}
+
+type NSI730Page {
+  documents: [NSI730]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI732 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  KODOSNREG: Int
+  MINLEVEL: Int
+  modified: Long!
+  NAMEOSNREG: String
+  NAMEOSNREGSHORT: String
+  PRDOL: Int
+  PRIM: String
+  PRIZO: Int
+  S1: Int
+  S2: Int
+  S3: Int
+  S4: Int
+  S5: Int
+  schema: String!
+}
+
+type NSI732Page {
+  documents: [NSI732]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI733 {
+  DATGOL: String
+  id: ID!
+  modified: Long!
+  NAMIO: String
+  NUMSOZ: Int
+  ORGVLNAM: String
+  schema: String!
+  UROVPROVED: String
+  VIDIO: String
+  VRNIO: Float
+  VRNOBSHOB: Float
+  VRNOBSHOBPARENT: Float
+  VRNOVDOL: Float
+  VRNVIBREF: Float
+  ZAVNUMKSA: String
+}
+
+type NSI733Page {
+  documents: [NSI733]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI734 {
+  DL: Int
+  EM: Int
+  id: ID!
+  KODPRICH: Int
+  MJ: Int
+  modified: Long!
+  OTKAZ: Int
+  PR: Int
+  PRIM: String
+  PRIZO: Int
+  PRVP: Int
+  S1: Int
+  S2: Int
+  S3: Int
+  S4: Int
+  S5: Int
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATERETRO: String
+  TEXTPRICH: String
+  VIBCAND: Int
+  VIBDEP: Int
+  ZAMESH: Int
+}
+
+type NSI734Page {
+  documents: [NSI734]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI735 {
+  CODE: Int
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  NAME: String
+  schema: String!
+}
+
+type NSI735Page {
+  documents: [NSI735]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI736 {
+  DATEBLOCOUT: String
+  DATEKONST: String
+  DPORGUST: String
+  HOSTMID: String
+  id: ID!
+  IDHOMESTATE: Int
+  MAX_IZBIR: Int
+  MAX_VOZ: Int
+  MAXCHL: Float
+  MAXIO: Float
+  MAXIOOWN: Float
+  MAXIOPEOPL: Float
+  MAXKAND: Float
+  MAXKANDIO: Float
+  MAXKANDOWN: Float
+  MAXKANDPEOPL: Float
+  MAXPRES: Float
+  MAXPRESIO: Float
+  MAXPRESOWN: Float
+  MAXPRESPEOPL: Float
+  MAXPROC: Int
+  MIN_VOZ: Int
+  MINCHL: Float
+  MINPODP: Int
+  modified: Long!
+  NORMAPREDSTFED: Float
+  NORMAPREDSTMEST: Float
+  NORMAPREDSTREG: Float
+  ORGUST: String
+  PRCHECKDB: Int
+  PRFAMILYORDER: Int
+  PRIM: String
+  PRPODP2005: Int
+  PSTATENAME: String
+  schema: String!
+  SROKPOLN: String
+  STATEABR: String
+  STATENAME: String
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEROUTREPORT: String
+  TEROUTTVD: String
+  VR_END: String
+  VR_ST: String
+}
+
+type NSI736Page {
+  documents: [NSI736]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI737 {
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  NAMETIPVIB: String
+  PRIM: String
+  REZVIBOKR1: Int
+  REZVIBOKR2: Int
+  REZVIBOKR3: Int
+  REZVIBOKR4: Int
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TIP1: Int
+  TIP2: Int
+  TIP3: Int
+  TIP4: Int
+  TIPNEXT1: Int
+  TIPNEXT2: Int
+  TIPNEXT3: Int
+  TIPNEXT4: Int
+  VIDVIB: Int
+  VRN: Float!
+}
+
+type NSI737Page {
+  documents: [NSI737]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI738 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  NAME: String
+  PRIM: String
+  PVRN: Int
+  schema: String!
+  VRN: Int!
+}
+
+type NSI738Page {
+  documents: [NSI738]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI73Page {
+  documents: [NSI73]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI74 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI74Page {
+  documents: [NSI74]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI76 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI76Page {
+  documents: [NSI76]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI78 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI78Page {
+  documents: [NSI78]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI79 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI79Page {
+  documents: [NSI79]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI7Page {
+  documents: [NSI7]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI80 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI80Page {
+  documents: [NSI80]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI81 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI81Page {
+  documents: [NSI81]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI82 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI82Page {
+  documents: [NSI82]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI83 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI83Page {
+  documents: [NSI83]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI84 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI84Page {
+  documents: [NSI84]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI86 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI86Page {
+  documents: [NSI86]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI87 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI87Page {
+  documents: [NSI87]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI88 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI88Page {
+  documents: [NSI88]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI9 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI904 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI904Page {
+  documents: [NSI904]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI91 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI91Page {
+  documents: [NSI91]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI927 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI927Page {
+  documents: [NSI927]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI928 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI928Page {
+  documents: [NSI928]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI93 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI931 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI931Page {
+  documents: [NSI931]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI932 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI932Page {
+  documents: [NSI932]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI933 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI933Page {
+  documents: [NSI933]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI936 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI936Page {
+  documents: [NSI936]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI93Page {
+  documents: [NSI93]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI940 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI940Page {
+  documents: [NSI940]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI96 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI96Page {
+  documents: [NSI96]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI97 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI97Page {
+  documents: [NSI97]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI98 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI98Page {
+  documents: [NSI98]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI99 {
+  DATEADD: String
+  DATERETRO: String
+  id: ID!
+  modified: Long!
+  PRIM: String
+  PRRETRO: String
+  schema: String!
+  SORTIROVKA: Int
+  STOK: String
+  VNKOD: String
+  VNKODOK: String
+  VRN: Float!
+  VRN_CLS: Int
+  VRNSTOK: Float
+  ZNACHATR: String
+}
+
+type NSI998 {
+  DATERETRO: String
+  id: ID!
+  KATEGOR: Int
+  KTERUR: String
+  modified: Long!
+  NAME: String
+  NUMUR: Int
+  PARENT: Int
+  PRIM: String
+  PRRETRO: String
+  PRSINON: String
+  schema: String!
+  SYSVBR_DATEADD: String
+  SYSVBR_DATEMOD: String
+  SYSVBR_USERADD: String
+  SYSVBR_USERMOD: String
+  TEXT1: String
+  TEXT2: String
+  VNKOD: String
+  VNKODST: String
+  VRN: Float!
+  VRNCLS: Int
+  VRNSTOK: Float
+  VSK: String
+}
+
+type NSI998Page {
+  documents: [NSI998]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI99Page {
+  documents: [NSI99]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+type NSI9Page {
+  documents: [NSI9]!
+  expand: String
+  filter: ID
+  found: String!
+  fulltext: String
+  order: Long
+  page: String!
+  perPage: String!
+  schema: String!
+  total: String!
+}
+
+input Order {
+  field: String!
+  type: OrderType! = DESC
+}
+
+enum OrderType {
+  ASC
+  DESC
+}
+
+type ReportProgress {
+  id: String,
+  progresses: [String],
+  startDate: Int,
+  result: String
+}
+
+type Query {
+  DictionarySpecificationById(id: ID!): DictionarySpecification
+  DictionarySpecificationPaging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): DictionarySpecificationPage!
+  ProcessProgressByUserIdAndProcessIdAndTag(processId: String, userId: String, tag: String): ReportProgress!
+  NSI105ById(id: ID!): NSI105
+  NSI105Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI105Page!
+  NSI10ById(id: ID!): NSI10
+  NSI10Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI10Page!
+  NSI112ById(id: ID!): NSI112
+  NSI112Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI112Page!
+  NSI113ById(id: ID!): NSI113
+  NSI113Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI113Page!
+  NSI114ById(id: ID!): NSI114
+  NSI114Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI114Page!
+  NSI115ById(id: ID!): NSI115
+  NSI115Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI115Page!
+  NSI116ById(id: ID!): NSI116
+  NSI116Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI116Page!
+  NSI118ById(id: ID!): NSI118
+  NSI118Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI118Page!
+  NSI119ById(id: ID!): NSI119
+  NSI119Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI119Page!
+  NSI11ById(id: ID!): NSI11
+  NSI11Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI11Page!
+  NSI120ById(id: ID!): NSI120
+  NSI120Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI120Page!
+  NSI121ById(id: ID!): NSI121
+  NSI121Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI121Page!
+  NSI123ById(id: ID!): NSI123
+  NSI123Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI123Page!
+  NSI124ById(id: ID!): NSI124
+  NSI124Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI124Page!
+  NSI125ById(id: ID!): NSI125
+  NSI125Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI125Page!
+  NSI126ById(id: ID!): NSI126
+  NSI126Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI126Page!
+  NSI127ById(id: ID!): NSI127
+  NSI127Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI127Page!
+  NSI12ById(id: ID!): NSI12
+  NSI12Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI12Page!
+  NSI131ById(id: ID!): NSI131
+  NSI131Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI131Page!
+  NSI134ById(id: ID!): NSI134
+  NSI134Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI134Page!
+  NSI137ById(id: ID!): NSI137
+  NSI137Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI137Page!
+  NSI138ById(id: ID!): NSI138
+  NSI138Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI138Page!
+  NSI13ById(id: ID!): NSI13
+  NSI13Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI13Page!
+  NSI140ById(id: ID!): NSI140
+  NSI140Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI140Page!
+  NSI141ById(id: ID!): NSI141
+  NSI141Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI141Page!
+  NSI142ById(id: ID!): NSI142
+  NSI142Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI142Page!
+  NSI146ById(id: ID!): NSI146
+  NSI146Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI146Page!
+  NSI149ById(id: ID!): NSI149
+  NSI149Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI149Page!
+  NSI14ById(id: ID!): NSI14
+  NSI14Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI14Page!
+  NSI150ById(id: ID!): NSI150
+  NSI150Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI150Page!
+  NSI151ById(id: ID!): NSI151
+  NSI151Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI151Page!
+  NSI152ById(id: ID!): NSI152
+  NSI152Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI152Page!
+  NSI153ById(id: ID!): NSI153
+  NSI153Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI153Page!
+  NSI155ById(id: ID!): NSI155
+  NSI155Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI155Page!
+  NSI156ById(id: ID!): NSI156
+  NSI156Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI156Page!
+  NSI15ById(id: ID!): NSI15
+  NSI15Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI15Page!
+  NSI161ById(id: ID!): NSI161
+  NSI161Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI161Page!
+  NSI162ById(id: ID!): NSI162
+  NSI162Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI162Page!
+  NSI163ById(id: ID!): NSI163
+  NSI163Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI163Page!
+  NSI164ById(id: ID!): NSI164
+  NSI164Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI164Page!
+  NSI165ById(id: ID!): NSI165
+  NSI165Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI165Page!
+  NSI167ById(id: ID!): NSI167
+  NSI167Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI167Page!
+  NSI168ById(id: ID!): NSI168
+  NSI168Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI168Page!
+  NSI16ById(id: ID!): NSI16
+  NSI16Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI16Page!
+  NSI170ById(id: ID!): NSI170
+  NSI170Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI170Page!
+  NSI171ById(id: ID!): NSI171
+  NSI171Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI171Page!
+  NSI172ById(id: ID!): NSI172
+  NSI172Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI172Page!
+  NSI174ById(id: ID!): NSI174
+  NSI174Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI174Page!
+  NSI176ById(id: ID!): NSI176
+  NSI176Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI176Page!
+  NSI177ById(id: ID!): NSI177
+  NSI177Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI177Page!
+  NSI178ById(id: ID!): NSI178
+  NSI178Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI178Page!
+  NSI179ById(id: ID!): NSI179
+  NSI179Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI179Page!
+  NSI180ById(id: ID!): NSI180
+  NSI180Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI180Page!
+  NSI181ById(id: ID!): NSI181
+  NSI181Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI181Page!
+  NSI182ById(id: ID!): NSI182
+  NSI182Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI182Page!
+  NSI184ById(id: ID!): NSI184
+  NSI184Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI184Page!
+  NSI185ById(id: ID!): NSI185
+  NSI185Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI185Page!
+  NSI186ById(id: ID!): NSI186
+  NSI186Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI186Page!
+  NSI187ById(id: ID!): NSI187
+  NSI187Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI187Page!
+  NSI18ById(id: ID!): NSI18
+  NSI18Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI18Page!
+  NSI190ById(id: ID!): NSI190
+  NSI190Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI190Page!
+  NSI191ById(id: ID!): NSI191
+  NSI191Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI191Page!
+  NSI192ById(id: ID!): NSI192
+  NSI192Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI192Page!
+  NSI193ById(id: ID!): NSI193
+  NSI193Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI193Page!
+  NSI19ById(id: ID!): NSI19
+  NSI19Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI19Page!
+  NSI1ById(id: ID!): NSI1
+  NSI1Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI1Page!
+  NSI200ById(id: ID!): NSI200
+  NSI200Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI200Page!
+  NSI201ById(id: ID!): NSI201
+  NSI201Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI201Page!
+  NSI202ById(id: ID!): NSI202
+  NSI202Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI202Page!
+  NSI204ById(id: ID!): NSI204
+  NSI204Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI204Page!
+  NSI205ById(id: ID!): NSI205
+  NSI205Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI205Page!
+  NSI206ById(id: ID!): NSI206
+  NSI206Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI206Page!
+  NSI20ById(id: ID!): NSI20
+  NSI20Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI20Page!
+  NSI211ById(id: ID!): NSI211
+  NSI211Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI211Page!
+  NSI212ById(id: ID!): NSI212
+  NSI212Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI212Page!
+  NSI213ById(id: ID!): NSI213
+  NSI213Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI213Page!
+  NSI215ById(id: ID!): NSI215
+  NSI215Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI215Page!
+  NSI216ById(id: ID!): NSI216
+  NSI216Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI216Page!
+  NSI21ById(id: ID!): NSI21
+  NSI21Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI21Page!
+  NSI221ById(id: ID!): NSI221
+  NSI221Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI221Page!
+  NSI222ById(id: ID!): NSI222
+  NSI222Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI222Page!
+  NSI223ById(id: ID!): NSI223
+  NSI223Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI223Page!
+  NSI224ById(id: ID!): NSI224
+  NSI224Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI224Page!
+  NSI23ById(id: ID!): NSI23
+  NSI23Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI23Page!
+  NSI24ById(id: ID!): NSI24
+  NSI24Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI24Page!
+  NSI25ById(id: ID!): NSI25
+  NSI25Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI25Page!
+  NSI26ById(id: ID!): NSI26
+  NSI26Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI26Page!
+  NSI27ById(id: ID!): NSI27
+  NSI27Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI27Page!
+  NSI28ById(id: ID!): NSI28
+  NSI28Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI28Page!
+  NSI29ById(id: ID!): NSI29
+  NSI29Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI29Page!
+  NSI2ById(id: ID!): NSI2
+  NSI2Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI2Page!
+  NSI300ById(id: ID!): NSI300
+  NSI300Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI300Page!
+  NSI301ById(id: ID!): NSI301
+  NSI301Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI301Page!
+  NSI302ById(id: ID!): NSI302
+  NSI302Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI302Page!
+  NSI303ById(id: ID!): NSI303
+  NSI303Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI303Page!
+  NSI304ById(id: ID!): NSI304
+  NSI304Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI304Page!
+  NSI305ById(id: ID!): NSI305
+  NSI305Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI305Page!
+  NSI306ById(id: ID!): NSI306
+  NSI306Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI306Page!
+  NSI307ById(id: ID!): NSI307
+  NSI307Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI307Page!
+  NSI308ById(id: ID!): NSI308
+  NSI308Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI308Page!
+  NSI309ById(id: ID!): NSI309
+  NSI309Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI309Page!
+  NSI30ById(id: ID!): NSI30
+  NSI30Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI30Page!
+  NSI310ById(id: ID!): NSI310
+  NSI310Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI310Page!
+  NSI311ById(id: ID!): NSI311
+  NSI311Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI311Page!
+  NSI31ById(id: ID!): NSI31
+  NSI31Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI31Page!
+  NSI320ById(id: ID!): NSI320
+  NSI320Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI320Page!
+  NSI321ById(id: ID!): NSI321
+  NSI321Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI321Page!
+  NSI322ById(id: ID!): NSI322
+  NSI322Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI322Page!
+  NSI323ById(id: ID!): NSI323
+  NSI323Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI323Page!
+  NSI324ById(id: ID!): NSI324
+  NSI324Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI324Page!
+  NSI325ById(id: ID!): NSI325
+  NSI325Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI325Page!
+  NSI326ById(id: ID!): NSI326
+  NSI326Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI326Page!
+  NSI327ById(id: ID!): NSI327
+  NSI327Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI327Page!
+  NSI328ById(id: ID!): NSI328
+  NSI328Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI328Page!
+  NSI329ById(id: ID!): NSI329
+  NSI329Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI329Page!
+  NSI32ById(id: ID!): NSI32
+  NSI32Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI32Page!
+  NSI330ById(id: ID!): NSI330
+  NSI330Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI330Page!
+  NSI331ById(id: ID!): NSI331
+  NSI331Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI331Page!
+  NSI332ById(id: ID!): NSI332
+  NSI332Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI332Page!
+  NSI334ById(id: ID!): NSI334
+  NSI334Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI334Page!
+  NSI335ById(id: ID!): NSI335
+  NSI335Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI335Page!
+  NSI336ById(id: ID!): NSI336
+  NSI336Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI336Page!
+  NSI337ById(id: ID!): NSI337
+  NSI337Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI337Page!
+  NSI338ById(id: ID!): NSI338
+  NSI338Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI338Page!
+  NSI339ById(id: ID!): NSI339
+  NSI339Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI339Page!
+  NSI33ById(id: ID!): NSI33
+  NSI33Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI33Page!
+  NSI340ById(id: ID!): NSI340
+  NSI340Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI340Page!
+  NSI341ById(id: ID!): NSI341
+  NSI341Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI341Page!
+  NSI343ById(id: ID!): NSI343
+  NSI343Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI343Page!
+  NSI345ById(id: ID!): NSI345
+  NSI345Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI345Page!
+  NSI346ById(id: ID!): NSI346
+  NSI346Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI346Page!
+  NSI347ById(id: ID!): NSI347
+  NSI347Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI347Page!
+  NSI348ById(id: ID!): NSI348
+  NSI348Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI348Page!
+  NSI349ById(id: ID!): NSI349
+  NSI349Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI349Page!
+  NSI34ById(id: ID!): NSI34
+  NSI34Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI34Page!
+  NSI350ById(id: ID!): NSI350
+  NSI350Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI350Page!
+  NSI351ById(id: ID!): NSI351
+  NSI351Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI351Page!
+  NSI35ById(id: ID!): NSI35
+  NSI35Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI35Page!
+  NSI36ById(id: ID!): NSI36
+  NSI36Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI36Page!
+  NSI39ById(id: ID!): NSI39
+  NSI39Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI39Page!
+  NSI3ById(id: ID!): NSI3
+  NSI3Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI3Page!
+  NSI40ById(id: ID!): NSI40
+  NSI40Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI40Page!
+  NSI41ById(id: ID!): NSI41
+  NSI41Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI41Page!
+  NSI42ById(id: ID!): NSI42
+  NSI42Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI42Page!
+  NSI43ById(id: ID!): NSI43
+  NSI43Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI43Page!
+  NSI44ById(id: ID!): NSI44
+  NSI44Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI44Page!
+  NSI45ById(id: ID!): NSI45
+  NSI45Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI45Page!
+  NSI46ById(id: ID!): NSI46
+  NSI46Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI46Page!
+  NSI47ById(id: ID!): NSI47
+  NSI47Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI47Page!
+  NSI49ById(id: ID!): NSI49
+  NSI49Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI49Page!
+  NSI4ById(id: ID!): NSI4
+  NSI4Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI4Page!
+  NSI58ById(id: ID!): NSI58
+  NSI58Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI58Page!
+  NSI5ById(id: ID!): NSI5
+  NSI5Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI5Page!
+  NSI63ById(id: ID!): NSI63
+  NSI63Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI63Page!
+  NSI64ById(id: ID!): NSI64
+  NSI64Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI64Page!
+  NSI669ById(id: ID!): NSI669
+  NSI669Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI669Page!
+  NSI66ById(id: ID!): NSI66
+  NSI66Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI66Page!
+  NSI671ById(id: ID!): NSI671
+  NSI671Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI671Page!
+  NSI672ById(id: ID!): NSI672
+  NSI672Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI672Page!
+  NSI69ById(id: ID!): NSI69
+  NSI69Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI69Page!
+  NSI704ById(id: ID!): NSI704
+  NSI704Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI704Page!
+  NSI706ById(id: ID!): NSI706
+  NSI706Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI706Page!
+  NSI708ById(id: ID!): NSI708
+  NSI708Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI708Page!
+  NSI710ById(id: ID!): NSI710
+  NSI710Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI710Page!
+  NSI711ById(id: ID!): NSI711
+  NSI711Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI711Page!
+  NSI713ById(id: ID!): NSI713
+  NSI713Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI713Page!
+  NSI714ById(id: ID!): NSI714
+  NSI714Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI714Page!
+  NSI715ById(id: ID!): NSI715
+  NSI715Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI715Page!
+  NSI717ById(id: ID!): NSI717
+  NSI717Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI717Page!
+  NSI718ById(id: ID!): NSI718
+  NSI718Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI718Page!
+  NSI719ById(id: ID!): NSI719
+  NSI719Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI719Page!
+  NSI71ById(id: ID!): NSI71
+  NSI71Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI71Page!
+  NSI720ById(id: ID!): NSI720
+  NSI720Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI720Page!
+  NSI721ById(id: ID!): NSI721
+  NSI721Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI721Page!
+  NSI722ById(id: ID!): NSI722
+  NSI722Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI722Page!
+  NSI723ById(id: ID!): NSI723
+  NSI723Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI723Page!
+  NSI724ById(id: ID!): NSI724
+  NSI724Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI724Page!
+  NSI725ById(id: ID!): NSI725
+  NSI725Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI725Page!
+  NSI726ById(id: ID!): NSI726
+  NSI726Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI726Page!
+  NSI727ById(id: ID!): NSI727
+  NSI727Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI727Page!
+  NSI728ById(id: ID!): NSI728
+  NSI728Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI728Page!
+  NSI729ById(id: ID!): NSI729
+  NSI729Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI729Page!
+  NSI72ById(id: ID!): NSI72
+  NSI72Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI72Page!
+  NSI730ById(id: ID!): NSI730
+  NSI730Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI730Page!
+  NSI732ById(id: ID!): NSI732
+  NSI732Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI732Page!
+  NSI733ById(id: ID!): NSI733
+  NSI733Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI733Page!
+  NSI734ById(id: ID!): NSI734
+  NSI734Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI734Page!
+  NSI735ById(id: ID!): NSI735
+  NSI735Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI735Page!
+  NSI736ById(id: ID!): NSI736
+  NSI736Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI736Page!
+  NSI737ById(id: ID!): NSI737
+  NSI737Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI737Page!
+  NSI738ById(id: ID!): NSI738
+  NSI738Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI738Page!
+  NSI73ById(id: ID!): NSI73
+  NSI73Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI73Page!
+  NSI74ById(id: ID!): NSI74
+  NSI74Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI74Page!
+  NSI76ById(id: ID!): NSI76
+  NSI76Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI76Page!
+  NSI78ById(id: ID!): NSI78
+  NSI78Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI78Page!
+  NSI79ById(id: ID!): NSI79
+  NSI79Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI79Page!
+  NSI7ById(id: ID!): NSI7
+  NSI7Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI7Page!
+  NSI80ById(id: ID!): NSI80
+  NSI80Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI80Page!
+  NSI81ById(id: ID!): NSI81
+  NSI81Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI81Page!
+  NSI82ById(id: ID!): NSI82
+  NSI82Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI82Page!
+  NSI83ById(id: ID!): NSI83
+  NSI83Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI83Page!
+  NSI84ById(id: ID!): NSI84
+  NSI84Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI84Page!
+  NSI86ById(id: ID!): NSI86
+  NSI86Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI86Page!
+  NSI87ById(id: ID!): NSI87
+  NSI87Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI87Page!
+  NSI88ById(id: ID!): NSI88
+  NSI88Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI88Page!
+  NSI904ById(id: ID!): NSI904
+  NSI904Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI904Page!
+  NSI91ById(id: ID!): NSI91
+  NSI91Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI91Page!
+  NSI927ById(id: ID!): NSI927
+  NSI927Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI927Page!
+  NSI928ById(id: ID!): NSI928
+  NSI928Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI928Page!
+  NSI931ById(id: ID!): NSI931
+  NSI931Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI931Page!
+  NSI932ById(id: ID!): NSI932
+  NSI932Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI932Page!
+  NSI933ById(id: ID!): NSI933
+  NSI933Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI933Page!
+  NSI936ById(id: ID!): NSI936
+  NSI936Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI936Page!
+  NSI93ById(id: ID!): NSI93
+  NSI93Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI93Page!
+  NSI940ById(id: ID!): NSI940
+  NSI940Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI940Page!
+  NSI96ById(id: ID!): NSI96
+  NSI96Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI96Page!
+  NSI97ById(id: ID!): NSI97
+  NSI97Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI97Page!
+  NSI98ById(id: ID!): NSI98
+  NSI98Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI98Page!
+  NSI998ById(id: ID!): NSI998
+  NSI998Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI998Page!
+  NSI99ById(id: ID!): NSI99
+  NSI99Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI99Page!
+  NSI9ById(id: ID!): NSI9
+  NSI9Paging(page: Int = 1, perPage: Int = 10, filter: String, fulltext: String, order: [Order]): NSI9Page!
+}

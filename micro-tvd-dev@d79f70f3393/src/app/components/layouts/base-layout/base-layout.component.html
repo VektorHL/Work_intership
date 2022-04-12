@@ -1,0 +1,23 @@
+<ng-container *ngIf="{ isMenu: isMenu$ | async } as observables">
+  <div [class.gas-layout__body_menu]="observables.isMenu" class="gas-layout__body">
+    <ng-container *ngIf="topComponent$ | async as topComponent">
+      <ng-template [ngTemplateOutlet]="topComponent"></ng-template>
+    </ng-container>
+
+    <div class="gas-layout__header">
+      <app-base-header>
+        <ng-container *ngIf="headerBottomComponent$ | async as headerBottomComponent">
+          <ng-template [ngTemplateOutlet]="headerBottomComponent"></ng-template>
+        </ng-container>
+      </app-base-header>
+    </div>
+
+    <div>
+      <ng-content></ng-content>
+    </div>
+
+    <ng-container *ngIf="botComponent$ | async as botComponent">
+      <ng-template [ngTemplateOutlet]="botComponent"></ng-template>
+    </ng-container>
+  </div>
+</ng-container>
