@@ -1,9 +1,0 @@
-<div class="grid header-actions__wrapper">
-  <ng-container *ngIf="menu.length">
-    <div gasButton="secondary" postfixIconName="arrows-chevron-down" [disabled]="disabled">Действия</div>
-    <gas-card class="header-actions" *ngIf="opened" gasClickOutside (handleClick)="onClickEmptySpace()">
-      <gas-vertical-menu type="light" size="large" [menu]="menu" (onMenuClicked)="onMenuClickedHandle($event.path)">
-      </gas-vertical-menu>
-    </gas-card>
-  </ng-container>
-</div>
