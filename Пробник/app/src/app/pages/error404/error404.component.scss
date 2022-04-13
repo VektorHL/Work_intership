@@ -1,0 +1,11 @@
+.error-page {
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    padding: var(--gas-layout-content-padding, var(--lg-size));
+}
+
+.icon-style {
+    margin-top: 1em;
+    margin-bottom: 0;
+}

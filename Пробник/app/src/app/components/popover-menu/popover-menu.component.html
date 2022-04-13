@@ -1,0 +1,13 @@
+<div class="popover-menu" *ngIf="hasChildRoutes">
+    <div class="popover-menu__title">{{ menuItem?.title }}</div>
+    <div class="overflow-scroll_y hidden-scrollbar popover-menu__scroll">
+        <div
+            class="popover-menu__item"
+            *ngFor="let item of menuItem?.childs"
+            [class._active]="isRouteActive(item)"
+            (click)="goToRoute($event, item)"
+        >
+            {{ item.title }}
+        </div>
+    </div>
+</div>
