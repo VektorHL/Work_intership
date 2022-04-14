@@ -1,0 +1,40 @@
+<app-base-modal [(visible)]="visible" [persistent]="true" [leftSide]="true">
+  <app-base-modal-default-layout [removePadding]="true" [width]="25" [leftSide]="true">
+    <ng-container header>
+      <div class="user-info__header">
+        <div class="user-info__header__close" (click)="closeEvent.emit()">
+          <gas-icon name="notifications-close" [size]="20"> </gas-icon>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-container>
+      <div class="user-info__body user-info__menu">
+        <h2 class="user-info__menu__title">Профиль пользователя</h2>
+
+        <div class="user-info__menu__item">
+          <gas-icon
+            class="user-info__icon user-info__menu__item__icon"
+            icon
+            name="common-user"
+          ></gas-icon>
+          <div>
+            <h3 class="user-info__menu__item__title">{{ userName }}</h3>
+            <span>{{ userRole }}</span>
+          </div>
+        </div>
+
+        <div class="user-info__menu__item" (click)="logoutEvent.emit()">
+          <gas-icon
+            class="user-info__icon user-info__menu__item__icon"
+            icon
+            name="common-outcome"
+          ></gas-icon>
+          <div>
+            <h3 class="user-info__menu__item__title">Выход</h3>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </app-base-modal-default-layout>
+</app-base-modal>
