@@ -1,0 +1,68 @@
+@import "../../../../../../node_modules/@cikrf/gas-ui-kit/style/index";
+@import "~src/styles";
+
+gas-select-dropdown {
+  z-index: var(--layer-highest) !important;
+}
+.user-info {
+  &__icon {
+    color: var(--base-priority-medium);
+  }
+
+  &__menu {
+    &__title {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-left: 62px;
+    }
+    display: flex;
+    flex-direction: column;
+
+    &__item {
+      padding: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      cursor: pointer;
+      transition: all 0.4s;
+      &__icon {
+        margin-right: 18px;
+      }
+      &__title {
+        margin: 0;
+      }
+      &:hover {
+        background-color: var(--base-priority-light);
+      }
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0 16px;
+
+    &__close {
+      color: var(--base-priority-medium);
+      width: 100%;
+      cursor: pointer;
+    }
+
+    &__title {
+      text-align: start;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 26px;
+    }
+  }
+
+  &__body {
+    &__title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
